@@ -166,43 +166,7 @@ void handle_init(AppContextRef ctx) {
   layer_set_frame(&text_date_layer.layer, GRect(0, 150, 144, 168-150));
   text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_MONOSPACE_TYPEWRITER_18)));
   layer_add_child(&window.layer, &text_date_layer.layer);
-
-
-/*
-  #if SHOW_TEXT_TIME
-
-  text_layer_init(&text_time_layer, window.layer.frame);
-  text_layer_set_text_color(&text_time_layer, GColorWhite);
-  text_layer_set_background_color(&text_time_layer, GColorClear);
-
-  #if SHOW_TEXT_DATE
-  layer_set_frame(&text_time_layer.layer, GRect(47, 57, 144-47, 168-57));
-  #else
-  layer_set_frame(&text_time_layer.layer, GRect(47, 70, 144-47, 168-70));
-  #endif
-
-  text_layer_set_font(&text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
-  layer_add_child(&window.layer, &text_time_layer.layer);
-
-  #endif
-
-  #if SHOW_TEXT_DATE
-
-  text_layer_init(&text_date_layer, window.layer.frame);
-  text_layer_set_text_color(&text_date_layer, GColorWhite);
-  text_layer_set_background_color(&text_date_layer, GColorClear);
-    #if SHOW_TEXT_TIME
-    layer_set_frame(&text_date_layer.layer, GRect(44, 80, 144-44, 168-80));
-    #else
-    layer_set_frame(&text_date_layer.layer, GRect(44, 70, 144-44, 168-70));
-    #endif
-  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
-  layer_add_child(&window.layer, &text_date_layer.layer);
-
-  #endif
-*/
 }
-
 
 void pbl_main(void *params) {
   PebbleAppHandlers handlers = {
